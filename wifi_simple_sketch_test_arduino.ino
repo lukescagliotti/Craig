@@ -7,6 +7,8 @@ char ssid[] = "wifi";
 char pass[] = "pass";
 int keyIndex = 0;
 
+// setup your password of wifi above ^^
+
 int status = WL_IDLE_STATUS;
 WiFiServer server(80);
 
@@ -52,10 +54,10 @@ void loop()
 
                     if (c == '\n')
                     {
-                        client.println("<a href=\"/?lighton\"\" style='font-size:100px;'>first button</a>");
+                        client.println("<a href=\"/?lighton\"\" style='font-size:100px;'>turn on led on pin 9</a>");
                         client.println("<br />");
                         client.println("<br />");
-                        client.println("<a href=\"/?lightoff\"\" style='font-size:100px;'>second button</a><br />");
+                        client.println("<a href=\"/?lightoff\"\" style='font-size:100px;'>turn off led on pin 9</a><br />");
 
                         delay(1);
 
